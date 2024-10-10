@@ -1,6 +1,6 @@
-from project import velocity_breakdown
-from project import float_range
-from project import displacement
+from main import velocity_breakdown
+from main import float_range
+from main import displacement
 import pytest
 import math
 
