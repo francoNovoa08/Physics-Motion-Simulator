@@ -33,8 +33,7 @@ def get_user_choice():
 
 
 def simulate_projectile_motion():
-    h, θ, u = get_projectile_motion_values()
-    g = 9.81
+    h, θ, u, g = get_projectile_motion_values()
     θ = math.radians(θ)
     #breaks the initial velocity into horizontal and vertical components
     u_x, u_y = velocity_breakdown(u, θ)
@@ -68,11 +67,15 @@ def simulate_projectile_motion():
 
 
 def get_projectile_motion_values():
+    gravity_values = {"Earth":9.81, "Moon":1.62, "Mars":3.721, "Jupiter": 24.79}
     while True:
         try:
             height = float(input("Enter height (m): "))
             angle = float(input("Enter angle (°): "))
             initial_velocity = float(input("Enter initial velocity (m/s): "))
+            planet = str(input("Enter body that exerts gravity\n "
+                                 "(Earth, Moon, Mars, Jupiter): ")).lower().strip()
+            gravity = gravity_values[planet]
         except ValueError:
             print("Invalid input")
             pass
@@ -80,7 +83,7 @@ def get_projectile_motion_values():
             print(f"An error has occured {e}")
         else:
             if height >= 0 and 0 < angle <= 90 and initial_velocity > 0:
-                return height, angle, initial_velocity
+                return height, angle, initial_velocity, gravity
 
 
 def velocity_breakdown(velocity, angle):
