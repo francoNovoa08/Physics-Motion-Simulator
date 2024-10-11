@@ -23,6 +23,7 @@ The tests check for a correct breakdown of velocity components, accurate displac
 ## Dependencies
 - matplotlib
 - pytest
+
 Install them with:
 ```
 pip install matplotlib pytest
