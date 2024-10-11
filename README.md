@@ -1,6 +1,6 @@
 # Physics Motion Simulation Tool
 ## Overview
-This Python project provides an interactive command-line tool that simulates basic physics motion models, including projectile motion and two-dimensional motion. Users can input initial conditions such as position, velocity, acceleration, and time to generate real-time graphs of motion trajectories.
+This Python project provides an interactive command-line tool that simulates basic physics motion models, including projectile motion and two-dimensional motion. Users can input initial conditions such as position, velocity, acceleration, and time to generate real-time graphs of motion trajectories. Users can also input a planet to affect the gravitational field strength of the projectile.
 The project also includes unit tests to ensure the accuracy of the physics models.
 ## Features
 Projectile Motion Simulation: Simulates the motion of a projectile, accounting for initial height, launch angle, and initial velocity.
